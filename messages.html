@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="color-scheme" content="light only">
+  <meta name="robots" content="noindex, nofollow">
+  <title>رسائل المحبين | أحمد وأمل</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:ital,wght@0,400;0,700;1,400&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="messages.css">
+</head>
+<body class="messages-page">
+
+  <div class="floral-fixed-bg"></div>
+
+  <main class="wall">
+    <div class="topbar">
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+        العودة للدعوة
+      </a>
+      <button type="button" id="logoutBtn" class="back-link">تسجيل الخروج</button>
+    </div>
+
+    <header class="wall-head">
+      <p class="wall-eyebrow">كلمات من القلب</p>
+      <h1 class="wall-title">رسائل المحبين</h1>
+      <p class="wall-sub">للعروسين أحمد الباشا وأمل عمرو</p>
+      <p id="count" class="wall-count"></p>
+    </header>
+
+    <p id="state" class="wall-state">جاري التحقق من الدخول...</p>
+    <section id="cards" class="cards" aria-live="polite"></section>
+  </main>
+
+  <script type="module" src="messages.js"></script>
+</body>
+</html>

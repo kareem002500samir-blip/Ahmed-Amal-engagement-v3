@@ -1,0 +1,162 @@
+/* ملف جديد: بيتحمل بعد style.css — فورم الرسائل + زرار القفل + نافذة الدخول */
+
+/* ---------- زرار الدخول (جنب زرار المزيكا) ---------- */
+.admin-toggle{ left: 82px; }          /* زرار المزيكا left:24px + عرضه 46px + مسافة 12px */
+
+/* ---------- سكشن الفورم ---------- */
+.wish-section{
+  min-height: auto;
+  flex-direction: column;
+  text-align: center;
+  padding: 40px 24px 90px;
+  gap: 14px;
+  background: transparent;
+}
+.wish-title{
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+  color: var(--espresso);
+  font-size: clamp(30px, 6vw, 46px);
+}
+.wish-sub{
+  font-family: 'Amiri', serif;
+  font-style: italic;
+  color: var(--olive-dark);
+  font-size: 19px;
+  margin-bottom: 8px;
+}
+.wish-form{
+  width: min(88vw, 460px);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px 20px;
+  background: rgba(251,243,230,0.82);
+  border: 1px solid rgba(59,42,30,0.28);
+  border-radius: 20px;
+  box-shadow: 0 10px 26px rgba(59,42,30,0.14);
+}
+.wish-form input[type="text"],
+.wish-form textarea,
+.login-card input{
+  width: 100%;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px;               /* 16px عشان الموبايل ما يعملش zoom */
+  color: var(--ink);
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(59,42,30,0.25);
+  border-radius: 14px;
+  padding: 13px 16px;
+  outline: none;
+  text-align: right;
+  transition: border-color .25s ease, box-shadow .25s ease;
+}
+.wish-form textarea{ resize: vertical; min-height: 120px; line-height: 1.7; }
+.wish-form input:focus,
+.wish-form textarea:focus,
+.login-card input:focus{
+  border-color: var(--gold-deep);
+  box-shadow: 0 0 0 3px rgba(217,166,87,0.25);
+}
+.wish-hp{ position: absolute; left: -9999px; opacity: 0; pointer-events: none; }  /* فخ للبوتات */
+
+.wish-btn{
+  cursor: pointer;
+  font-family: 'Tajawal', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 15px 30px;
+  background: var(--espresso);
+  color: var(--cream);
+  border: 1px solid var(--espresso);
+  border-radius: 20px;
+  transition: background .35s ease, color .35s ease, transform .25s ease, opacity .25s ease;
+}
+.wish-btn:hover{ background: transparent; color: var(--espresso); transform: translateY(-2px); }
+.wish-btn:disabled{ opacity: .6; cursor: not-allowed; transform: none; }
+
+.wish-status{
+  min-height: 22px;
+  font-family: 'Tajawal', sans-serif;
+  font-size: 14px;
+}
+.wish-status.ok{ color: var(--olive-dark); }
+.wish-status.err{ color: #A23B2A; }
+
+/* ---------- نافذة تسجيل دخول العروسين ---------- */
+.login-modal{
+  position: fixed;
+  inset: 0;
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.login-modal[hidden]{ display: none; }
+
+.login-backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(46,32,19,0.55);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+.login-card{
+  position: relative;
+  width: min(92vw, 380px);
+  background: var(--cream);
+  border: 1px solid rgba(59,42,30,0.28);
+  border-radius: 22px;
+  padding: 34px 22px 24px;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(46,32,19,0.35);
+  animation: loginIn .35s ease;
+}
+.login-card::before{
+  content: "";
+  position: absolute;
+  inset: 7px;
+  border: 1px solid rgba(217,166,87,0.45);
+  border-radius: 16px;
+  pointer-events: none;
+}
+@keyframes loginIn{
+  from{ opacity: 0; transform: translateY(16px) scale(.97); }
+  to{ opacity: 1; transform: none; }
+}
+.login-close{
+  position: absolute;
+  top: 12px;
+  left: 14px;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: var(--espresso);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+.login-title{
+  font-family: 'Aref Ruqaa', serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--espresso);
+}
+.login-sub{
+  font-family: 'Amiri', serif;
+  font-style: italic;
+  color: var(--olive-dark);
+  font-size: 16px;
+  margin: 4px 0 18px;
+}
+.login-card form{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.login-card input{ text-align: center; }
