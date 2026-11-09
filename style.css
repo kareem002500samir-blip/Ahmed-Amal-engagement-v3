@@ -189,7 +189,7 @@
 .eyebrow{
   font-family:'Tajawal', sans-serif;
   position: relative;
-  top: -28vh;
+  top: -24vh;
   /* top: -100px;                 ده اللي بيرفع الجملة لفوق */
   padding-bottom: 20px;
   letter-spacing: 0.35em;
@@ -209,9 +209,10 @@
   text-shadow: 0 4px 30px rgba(0,0,0,0.35);
   position: relative;
   /* top: -100px;                 بيرفع الاسم لفوق */
-  top: -28vh;
+  top: -26vh;
   opacity:0;
   animation: fadeUp 1.4s ease 1.3s forwards;
+    white-space: nowrap;
 }
   .couple-names .amp{
     display:inline-block;
